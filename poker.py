@@ -11,13 +11,20 @@ class PokerHand:
 
     def compare_with(self, opponent):
         # Your code here
-
+        me = hand.hand
+        opponentHand = opponent.hand
         player1 = get_score(evaluate_hand(hand.hand))
         player2 = get_score(evaluate_hand(opponent.hand))
         if player1 == player2:
-
-            print("TIE")
-            return 0
+            if(get_sum_ranks(me) > get_sum_ranks(opponentHand)):
+                print("WIN")
+                return 1
+            elif(get_sum_ranks(me) < get_sum_ranks(opponentHand)):
+                print("LOSS")
+                return 2
+            else:
+                print("TIE")
+                return 0
         elif player1 > player2:
             print("WIN")
             return 1
@@ -25,6 +32,11 @@ class PokerHand:
             print("LOSS")
             return 2
 
+def get_sum_ranks(hand):
+    sum = 0
+    for i in get_ranks(hand):
+        sum += i
+    return sum
 
 def numeric_ranks(cards):
     """
@@ -192,8 +204,12 @@ def evaluate_hand(hand):
     return hand_names[total]
 
 
-hand = PokerHand("TD 9S QS QH TH")
-opponent = PokerHand("5D 5S QC 9H QH")
+hand = PokerHand("3D 4S 5S 6H 7H")
+opponent = PokerHand("2C 3C 4C 5H 6C")
+
+show_cards(hand.hand)
+show_cards(opponent.hand)
+
 print(hand.compare_with(opponent))
 
 
