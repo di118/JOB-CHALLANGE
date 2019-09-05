@@ -1,4 +1,4 @@
-# Grabyo technical test
+# technical test
 
 we love board games and will have an occasional poker night.
 Since no one remembers the card ranking you will have to write a program that
