@@ -1,6 +1,6 @@
 # Grabyo technical test
 
-At Grabyo we love board games and will have an occasional poker night.
+we love board games and will have an occasional poker night.
 Since no one remembers the card ranking you will have to write a program that
 compare poker hands and determines a winner.
 
