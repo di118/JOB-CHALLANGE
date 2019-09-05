@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 from poker import PokerHand
-
+from poker import show_cards
 class TestCase(unittest.TestCase):
 
     def test_royal_flush_wins(self):

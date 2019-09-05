@@ -210,6 +210,6 @@ opponent = PokerHand("2C 3C 4C 5H 6C")
 show_cards(hand.hand)
 show_cards(opponent.hand)
 
-print(hand.compare_with(opponent))
+# print(hand.compare_with(opponent))
 
 
